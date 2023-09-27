@@ -6,6 +6,7 @@ import android.os.Bundle
 import com.android.volley.toolbox.StringRequest
 import com.android.volley.toolbox.Volley
 import com.example.wiindi.databinding.ActivityMainBinding
+import com.example.wiindi.fragments.MainFragment
 import org.json.JSONObject
 
 
@@ -15,9 +16,11 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityMainBinding.inflate(layoutInflater)
-        setContentView(binding.root)
-
+        setContentView(R.layout.activity_main)
+        supportFragmentManager
+            .beginTransaction()
+            .replace(R.id.placeHolder, MainFragment.newInstance())
+            .commit()
 
     }
 
