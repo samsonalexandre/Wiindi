@@ -54,7 +54,7 @@ class MainFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         checkPermission()
         init()
-        requestWeatherData("Tokio")
+        requestWeatherData("Neuss")
         updateCurrentCard()
     }
 
@@ -68,12 +68,12 @@ class MainFragment : Fragment() {
 
     private fun updateCurrentCard() = with(binding) {
         model.liveDataCurrent.observe(viewLifecycleOwner) {
-            val tempMaxMin = "${it.maxTemp}C° /${it.minTemp}C°"
+            val tempMaxMin = "${it.maxTemp}°C /${it.minTemp}°C"
             tvData.text = it.time
             tvCity.text = it.city
-            tvCurrentTemp.text = it.currentTemp
+            tvCurrentTemp.text = it.currentTemp.ifEmpty { tempMaxMin }
             tvCondition.text = it.condition
-            tvMaxMin.text = tempMaxMin
+            tvMaxMin.text = if (it.currentTemp.isEmpty()) "" else tempMaxMin
             Picasso.get().load("https:" + it.imageUrl).into(imWeather)
 
         }
@@ -100,7 +100,7 @@ class MainFragment : Fragment() {
                 "&q= + " +
                 city +
                 "&days= + " +
-                "4 + " +
+                "8 + " +
                 "&aqi=no&alerts=no"
         val queue = Volley.newRequestQueue(context)
         val request = StringRequest(
@@ -135,8 +135,8 @@ class MainFragment : Fragment() {
                 day.getJSONObject("day").getJSONObject("condition")
                     .getString("text"),
                 "",
-                day.getJSONObject("day").getString("maxtemp_c"),
-                day.getJSONObject("day").getString("mintemp_c"),
+                day.getJSONObject("day").getString("maxtemp_c").toFloat().toInt().toString(),
+                day.getJSONObject("day").getString("mintemp_c").toFloat().toInt().toString(),
                 day.getJSONObject("day").getJSONObject("condition")
                     .getString("icon"),
                 day.getJSONArray("hour").toString()
@@ -144,6 +144,7 @@ class MainFragment : Fragment() {
             )
             list.add(item)
         }
+        model.liveDataList.value = list
         return list
     }
 
@@ -161,9 +162,9 @@ class MainFragment : Fragment() {
             weatherItem.hours
         )
         model.liveDataCurrent.value = item
-        Log.d("MyLog", "City: ${item.maxTemp}")
-        Log.d("MyLog", "Time: ${item.minTemp}")
-        Log.d("MyLog", "Time: ${item.hours}")
+//        Log.d("MyLog", "City: ${item.maxTemp}")
+//        Log.d("MyLog", "Time: ${item.minTemp}")
+//        Log.d("MyLog", "Time: ${item.hours}")
     }
 
     companion object {
