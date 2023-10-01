@@ -35,7 +35,7 @@ class HoursFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         initRcView()
         model.liveDataCurrent.observe(viewLifecycleOwner) {
-            //Log.d("MyLog", "Hours: ${it.hours}")
+            Log.d("MyLog", "Hours: ${it.hours}")
             adapter.submitList(getHoursList(it))
         }
     }

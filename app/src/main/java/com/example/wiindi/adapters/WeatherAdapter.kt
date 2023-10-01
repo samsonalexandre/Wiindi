@@ -10,8 +10,8 @@ import com.example.wiindi.R
 import com.example.wiindi.databinding.ListItemBinding
 import com.squareup.picasso.Picasso
 
-class WeatherAdapter(val listener: Listener?): ListAdapter<WeatherModel, WeatherAdapter.Holder>(Comparator()) {
-    class Holder(view: View, val listener: Listener?): RecyclerView.ViewHolder(view) {
+class WeatherAdapter(private val listener: Listener?): ListAdapter<WeatherModel, WeatherAdapter.Holder>(Comparator()) {
+    class Holder(view: View, private val listener: Listener?): RecyclerView.ViewHolder(view) {
 
         private val binding = ListItemBinding.bind(view)
         var itemTemp: WeatherModel? = null
@@ -24,7 +24,12 @@ class WeatherAdapter(val listener: Listener?): ListAdapter<WeatherModel, Weather
             itemTemp = item
             tvDate.text = item.time
             tvCondition.text = item.condition
-            tvTemp.text = item.currentTemp.ifEmpty { "${item.maxTemp}°C / ${item.minTemp}°C" }
+            if (item.currentTemp.isNotEmpty()) {
+                tvTemp.text = "${item.currentTemp}°C"
+            } else {
+                tvTemp.text = "${item.maxTemp}°C / ${item.minTemp}°C"
+            }
+            //tvTemp.text = item.currentTemp.ifEmpty { "${item.maxTemp}°C / ${item.minTemp}°C" }
             Picasso.get().load("https:" + item.imageUrl).into(im)
         }
     }
