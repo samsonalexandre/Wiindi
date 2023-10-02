@@ -74,6 +74,7 @@ class MainFragment : Fragment() {
         checkLocation()
     }
 
+    //Initialisiere die Benutzeroberfläche und die Interaktionselemente.
     private fun init() = with(binding) {
         fLocationClient = LocationServices.getFusedLocationProviderClient(requireContext())
         val adapter = VpAdapter(activity as FragmentActivity, fList)
@@ -98,6 +99,7 @@ class MainFragment : Fragment() {
         }
     }
 
+    //Überprüfe, ob die Standortdienste aktiviert sind, und zeigt gegebenenfalls eine Meldung an.
     private fun checkLocation() {
         if (isLocationEnabled()) {
             getLocation()
@@ -117,6 +119,7 @@ class MainFragment : Fragment() {
 
     }
 
+    //Versuche, den aktuellen Standort des Geräts abzurufen.
     private fun getLocation() {
         val ct = CancellationTokenSource()
         if (ActivityCompat.checkSelfPermission(
@@ -138,12 +141,13 @@ class MainFragment : Fragment() {
             }
     }
 
+    //Aktualisiere die Benutzeroberfläche mit den aktuellen Wetterdaten.
     private fun updateCurrentCard() = with(binding) {
         model.liveDataCurrent.observe(viewLifecycleOwner) {
             val tempMaxMin = "${it.maxTemp}°C /${it.minTemp}°C"
             tvData.text = it.time
             tvCity.text = it.city
-            tvCurrentTemp.text = "${it.currentTemp.ifEmpty { tempMaxMin }}°C"
+            tvCurrentTemp.text = "${it.currentTemp.ifEmpty { tempMaxMin }}"
             tvCondition.text = it.condition
             tvMaxMin.text = if (it.currentTemp.isEmpty()) "" else tempMaxMin
             Picasso.get().load("https:" + it.imageUrl).into(imWeather)
@@ -151,14 +155,14 @@ class MainFragment : Fragment() {
         }
     }
 
-    //Prüfe ob Location erlaubt ist
+    //Registriere einen Listener für Berechtigungsanfragen.
     private fun permissionListener() {
         pLauncher = registerForActivityResult(
             ActivityResultContracts.RequestPermission()) {
-            Toast.makeText(activity, "Permission is $it", Toast.LENGTH_LONG).show()
+            Toast.makeText(activity, "Erlaubnis ist $it", Toast.LENGTH_LONG).show()
         }
     }
-    //Prüfe ob Location erlaubt ist
+    //Überprüfe, ob die Standortberechtigung erteilt wurde und fragt sie gegebenenfalls an.
     private fun checkPermission() {
         if (isPermissionGranted(Manifest.permission.ACCESS_FINE_LOCATION)) {
             permissionListener()
@@ -166,6 +170,7 @@ class MainFragment : Fragment() {
         }
     }
 
+    //Sende eine HTTP-Anfrage an eine Wetter-API, um Wetterdaten für eine bestimmte Stadt abzurufen.
     private fun requestWeatherData(city: String) {
         val url = "http://api.weatherapi.com/v1/forecast.json?key= + " +
                 API_KEY +
@@ -188,12 +193,14 @@ class MainFragment : Fragment() {
         queue.add(request)
     }
 
+    //Analysiere die JSON-Antwort der Wetter-API und rufe die Wetterdaten für Tage ab.
     private fun parseWeatherData(result: String) {
         val mainObject = JSONObject(result)
         val list = parseDays(mainObject)
         parseCurrentData(mainObject, list[0])
     }
 
+    //Analysiere die JSON-Antwort und gebe eine Liste von Wetterdaten für Tage zurück.
     private fun parseDays(mainObject: JSONObject): List<WeatherModel> {
         val list = ArrayList<WeatherModel>()
         val daysArray = mainObject.getJSONObject("forecast")
@@ -220,6 +227,7 @@ class MainFragment : Fragment() {
         return list
     }
 
+    //Analysiere die JSON-Antwort und gebe die aktuelle Wetterdaten zurück.
     private fun parseCurrentData(mainObject: JSONObject, weatherItem: WeatherModel) {
         val item = WeatherModel(
             mainObject.getJSONObject("location").getString("name"),
@@ -239,10 +247,9 @@ class MainFragment : Fragment() {
         Log.d("MyLog", "Time: ${item.hours}")
     }
 
+    //Erstelle und gebe eine neue Instanz der MainFragment-Klasse zurück.
     companion object {
-
         @JvmStatic
         fun newInstance() = MainFragment()
-
     }
 }

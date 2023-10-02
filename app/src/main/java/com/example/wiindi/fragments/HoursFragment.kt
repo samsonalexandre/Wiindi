@@ -16,7 +16,7 @@ import com.example.wiindi.databinding.FragmentHoursBinding
 import org.json.JSONArray
 import org.json.JSONObject
 
-
+//Ein Fragment, das eine Liste von Wetterdaten für Stunden anzeigt.
 class HoursFragment : Fragment() {
     private lateinit var binding: FragmentHoursBinding
     private lateinit var adapter: WeatherAdapter
@@ -31,6 +31,8 @@ class HoursFragment : Fragment() {
         return binding.root
     }
 
+    //wird aufgerufen, wenn das Fragment erstellt wurde. Hier wird initRcView()
+    // aufgerufen und die LiveData des ViewModels beobachtet, um die Stundenwetterdaten in den RecyclerView zu laden.
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         initRcView()
@@ -40,6 +42,7 @@ class HoursFragment : Fragment() {
         }
     }
 
+    //Initialisiert den RecyclerView und den Adapter.
     private fun initRcView() = with(binding){
         rcView.layoutManager = LinearLayoutManager(activity)
         adapter = WeatherAdapter(null)
@@ -47,6 +50,7 @@ class HoursFragment : Fragment() {
 
     }
 
+    //Wandelt die Stundenwetterdaten in eine Liste von WeatherModel-Objekten um.
     private fun getHoursList(wItem: WeatherModel): List<WeatherModel> {
         val hoursArray = JSONArray(wItem.hours)
         val list = ArrayList<WeatherModel>()
@@ -68,8 +72,8 @@ class HoursFragment : Fragment() {
         return list
     }
 
+    //Erstelle und gebe eine neue Instanz der HoursFragment-Klasse zurück.
     companion object {
-
         @JvmStatic
         fun newInstance() = HoursFragment()
     }

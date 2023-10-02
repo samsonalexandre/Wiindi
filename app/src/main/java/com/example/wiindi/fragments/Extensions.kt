@@ -5,7 +5,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 
-fun Fragment.isPermissionGranted(p: String): Boolean {
+//Dies ist eine Datei mit zwei Funktionen, die von Fragmenten verwendet werden, um zu überprüfen, ob bestimmte Berechtigungen gewährt wurden.
+fun Fragment.isPermissionGranted(permission: String): Boolean {
     return ContextCompat.checkSelfPermission(
-        activity as AppCompatActivity, p) == PackageManager.PERMISSION_GRANTED
+        activity as AppCompatActivity, permission) == PackageManager.PERMISSION_GRANTED
 }

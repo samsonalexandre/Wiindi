@@ -13,7 +13,7 @@ import com.example.wiindi.adapters.WeatherAdapter
 import com.example.wiindi.adapters.WeatherModel
 import com.example.wiindi.databinding.FragmentDaysBinding
 
-
+//Ein Fragment, das eine Liste von Wetterdaten für Tage anzeigt.
 class DaysFragment : Fragment(), WeatherAdapter.Listener {
     private lateinit var adapter: WeatherAdapter
     private lateinit var binding: FragmentDaysBinding
@@ -27,12 +27,15 @@ class DaysFragment : Fragment(), WeatherAdapter.Listener {
         return binding.root
     }
 
+    //Initialisiert den RecyclerView und den Adapter.
     private fun init() = with(binding) {
         adapter = WeatherAdapter(this@DaysFragment)
         rcView.layoutManager = LinearLayoutManager(activity)
         rcView.adapter = adapter
     }
 
+    //wird aufgerufen, wenn das Fragment erstellt wurde. Hier wird init() aufgerufen und die LiveData des ViewModels beobachtet,
+    // um die Daten in den RecyclerView zu laden.
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         init()
@@ -41,11 +44,13 @@ class DaysFragment : Fragment(), WeatherAdapter.Listener {
         }
     }
 
+    //Erstelle und gebe eine neue Instanz der DaysFragment-Klasse zurück.
     companion object {
         @JvmStatic
         fun newInstance() = DaysFragment()
     }
 
+    //Methode, die aufgerufen wird, wenn ein Element im RecyclerView geklickt wird.
     override fun onClick(item: WeatherModel) {
         model.liveDataCurrent.value = item
     }
