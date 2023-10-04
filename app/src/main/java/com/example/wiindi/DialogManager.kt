@@ -17,7 +17,7 @@ object DialogManager {
             listener.onClick(null)
             dialog.dismiss()
         }
-        dialog.setButton(AlertDialog.BUTTON_NEGATIVE, "Cancel") {_,_ ->
+        dialog.setButton(AlertDialog.BUTTON_NEGATIVE, "Stornieren") {_,_ ->
             dialog.dismiss()
         }
         dialog.show()
@@ -34,7 +34,7 @@ object DialogManager {
             listener.onClick(edName.text.toString())
             dialog.dismiss()
         }
-        dialog.setButton(AlertDialog.BUTTON_NEGATIVE, "Cancel") {_,_ ->
+        dialog.setButton(AlertDialog.BUTTON_NEGATIVE, "Stornieren") {_,_ ->
             dialog.dismiss()
         }
         dialog.show()

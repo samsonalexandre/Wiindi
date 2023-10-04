@@ -147,7 +147,7 @@ class MainFragment : Fragment() {
             val tempMaxMin = "${it.maxTemp}°C /${it.minTemp}°C"
             tvData.text = it.time
             tvCity.text = it.city
-            tvCurrentTemp.text = "${it.currentTemp.ifEmpty { tempMaxMin }}"
+            tvCurrentTemp.text = it.currentTemp.ifEmpty { tempMaxMin }
             tvCondition.text = it.condition
             tvMaxMin.text = if (it.currentTemp.isEmpty()) "" else tempMaxMin
             Picasso.get().load("https:" + it.imageUrl).into(imWeather)
