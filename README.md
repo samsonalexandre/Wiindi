@@ -3,7 +3,6 @@
 Willkommen bei Wiindi, deiner benutzerfreundlichen Wetter-App für Android! Mit Wiindi kannst du das aktuelle Wetter und Vorhersagen für deine Stadt und andere Städte weltweit abrufen.
 
 ![Bildschirmfoto 2023-11-13 um 08 05 27](https://github.com/SI-Classroom-Batch-009/Wiindi/assets/12011808/3b1a0bd5-e2f7-4786-9773-2d69c5efd1ab)
-
 ![Bildschirmfoto 2023-11-13 um 08 05 41](https://github.com/SI-Classroom-Batch-009/Wiindi/assets/12011808/3299cd89-44f0-4241-b5d3-e23d4f3e19c7)
 
 
