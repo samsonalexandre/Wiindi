@@ -180,8 +180,7 @@ class MainFragment : Fragment() {
                 "8 + " +
                 "&aqi=no&alerts=no"
         val queue = Volley.newRequestQueue(context)
-        val request = StringRequest(
-            Request.Method.GET,
+        val request = StringRequest(Request.Method.GET,
             url,
             {
                 result ->parseWeatherData(result)

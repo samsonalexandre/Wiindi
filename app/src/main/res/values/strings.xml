@@ -9,5 +9,6 @@
     <string name="minMax">34° C / 15° C</string>
     <string name="stunden">Stunden</string>
     <string name="tage">Tage</string>
+    <string name="leer">Leer</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
