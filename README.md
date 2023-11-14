@@ -52,7 +52,7 @@ Die App erfordert die Berechtigung zum Zugriff auf deinen Standort, um standortb
 Die Wiindi-App steht unter der MIT-Lizenz. Weitere Informationen zur Lizenz findest du in der [Lizenzdatei](LICENSE).
 
 ## Kontakt
-Wenn du Fragen, Anmerkungen oder Probleme mit der App hast, zögere nicht, uns zu kontaktieren. Du kannst uns unter [alexander_samson@icloud.com] erreichen.
+Wenn du Fragen, Anmerkungen oder Probleme mit der App hast, zögere nicht, mich zu kontaktieren. Du kannst mich unter [alexander_samson@icloud.com] erreichen.
 
 Vielen Dank, dass du Wiindi verwendest!
 
