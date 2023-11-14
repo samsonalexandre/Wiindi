@@ -27,7 +27,7 @@ Willkommen bei Wiindi, deiner benutzerfreundlichen Wetter-App für Android! Mit 
 
 ## Funktionen
 - Anzeige des aktuellen Wetters, einschließlich Temperatur, Kondition und Bild.
-- Wettervorhersage für die nächsten 7 Tage und Stunden.
+- Wettervorhersage für die nächsten 14 Tage und Stunden.
 - Möglichkeit zur Suche nach Wetterinformationen für verschiedene Städte.
 - Standortbasierte Wetterdaten, wenn die Berechtigung erteilt wird.
 
