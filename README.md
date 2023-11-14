@@ -49,7 +49,7 @@ Wiindi verwendet verschiedene Bibliotheken, um bestimmte Funktionen zu implement
 Die App erfordert die Berechtigung zum Zugriff auf deinen Standort, um standortbasierte Wetterdaten anzuzeigen. Diese Berechtigung kann in den Einstellungen deines Geräts aktiviert oder deaktiviert werden.
 
 ## Lizenz
-Die Wiindi-App steht unter der MIT-Lizenz. Weitere Informationen zur Lizenz findest du in der [Lizenzdatei](LICENSE).
+Die Wiindi-App steht unter der [MIT-Lizenz](https://appmaster.io/de/glossary/mit-lizenz), was bedeutet, dass sie frei verwendet, geändert und weitergegeben werden kann, solange die Lizenzbedingungen eingehalten werden.
 
 ## Kontakt
 Wenn du Fragen, Anmerkungen oder Probleme mit der App hast, zögere nicht, mich zu kontaktieren. Du kannst mich unter [alexander_samson@icloud.com] erreichen.
