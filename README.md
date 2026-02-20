@@ -38,9 +38,6 @@ Das Projekt demonstriert die Integration externer REST-APIs, asynchrone Datenver
 ## 🎯 Ziel des Projekts
 Dieses Projekt wurde entwickelt, um praktische Erfahrung mit API-Integration, Netzwerkkommunikation und Datenverarbeitung in Android-Anwendungen zu sammeln.
 
-## 📸 Screenshots
-(Füge hier deine Screenshots ein)
-
 ## Lizenz
 MIT License
 
