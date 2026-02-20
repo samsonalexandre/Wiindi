@@ -47,4 +47,4 @@ Wenn du Fragen, Anmerkungen oder Probleme mit der App hast, zögere nicht, mich 
 
 Vielen Dank, dass du Wiindi verwendest!
 
-© 2025 Wiindi-Entwicklungsteam
+© 2023 Wiindi-Entwicklungsteam
