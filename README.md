@@ -1,4 +1,5 @@
 # Wiindi - Eine Wetter-App für Android
+⭐ Featured Project — Demonstrates Android Architecture, API Integration and Production-like App Structure
 
 Willkommen bei Wiindi, deiner benutzerfreundlichen Wetter-App für Android! Mit Wiindi kannst du das aktuelle Wetter und Vorhersagen für deine Stadt und andere Städte weltweit abrufen.
 
