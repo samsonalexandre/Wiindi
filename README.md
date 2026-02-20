@@ -7,49 +7,42 @@ Willkommen bei Wiindi, deiner benutzerfreundlichen Wetter-App für Android! Mit 
 
 
 
-## Inhaltsverzeichnis
-1. [Voraussetzungen](#voraussetzungen)
-2. [Installation](#installation)
-3. [Funktionen](#funktionen)
-4. [Verwendung](#verwendung)
-5. [Verwendete Bibliotheken](#verwendete-bibliotheken)
-6. [Berechtigungen](#berechtigungen)
-7. [Lizenz](#lizenz)
-8. [Kontakt](#kontakt)
+# 🌦 Wiindi – Weather App (Android)
 
-## Voraussetzungen
-- Android-Gerät mit mindestens Android 6.0 (API-Level 23).
-- [API](https://www.weatherapi.com)
+Wiindi ist eine moderne Android-Wetter-App, entwickelt mit Kotlin, die aktuelle Wetterdaten und Vorhersagen für Städte weltweit anzeigt.  
+Das Projekt demonstriert die Integration externer REST-APIs, asynchrone Datenverarbeitung sowie die Darstellung dynamischer Inhalte in einer benutzerfreundlichen mobilen Oberfläche.
 
-## Installation
-1. Lade die Wiindi-App aus dem [Google Play Store](https://play.google.com/store/apps/details?id=com.example.wiindi).
-2. Öffne die App und erteile die erforderlichen Berechtigungen, wenn du dazu aufgefordert wirst.
+## 🧠 Technische Highlights
+- Integration einer externen Wetter-API
+- Asynchrone Netzwerkkommunikation mit Volley
+- Bildladen und Caching mit Picasso
+- Standortbasierte Wetterdaten
+- Fragment-basierte Navigation
+- Fehlerbehandlung bei Netzwerkanfragen
 
-## Funktionen
-- Anzeige des aktuellen Wetters, einschließlich Temperatur, Kondition und Bild.
-- Wettervorhersage für die nächsten 14 Tage und Stunden.
-- Möglichkeit zur Suche nach Wetterinformationen für verschiedene Städte.
-- Standortbasierte Wetterdaten, wenn die Berechtigung erteilt wird.
+## 🛠 Tech Stack
+- Kotlin
+- Android SDK
+- AndroidX Fragments
+- Volley (Networking)
+- Picasso (Image Loading)
+- Material Design Components
 
-## Verwendete Bibliotheken
-Wiindi verwendet verschiedene Bibliotheken, um bestimmte Funktionen zu implementieren. Hier sind die wichtigsten Bibliotheken:
+## 📱 Features
+- Anzeige des aktuellen Wetters
+- Stunden- und 14-Tage-Vorhersage
+- Suche nach Städten weltweit
+- Standortbasierte Wetterinformationen
+- Dynamisches Aktualisieren der Wetterdaten
 
-- [Volley](https://github.com/google/volley): Eine Bibliothek für Netzwerkanfragen, die in Wiindi für die Abfrage von Wetterdaten verwendet wird.
-- [Picasso](https://square.github.io/picasso/): Eine Bibliothek zur einfachen Anzeige von Bildern, die in Wiindi für das Laden von Wetterbildern verwendet wird.
-- [AndroidX Fragment](https://developer.android.com/jetpack/androidx): Eine AndroidX-Bibliothek für die Verwaltung von Fragments in deiner App.
+## 🎯 Ziel des Projekts
+Dieses Projekt wurde entwickelt, um praktische Erfahrung mit API-Integration, Netzwerkkommunikation und Datenverarbeitung in Android-Anwendungen zu sammeln.
 
-## Verwendung
-1. Beim ersten Öffnen der App musst du möglicherweise die Standortberechtigung erteilen, um standortbasierte Wetterdaten zu erhalten.
-2. Die Startseite zeigt das aktuelle Wetter für deinen Standort an.
-3. Verwende die Tabs "Stunden" und "Tage", um die Wettervorhersage für Stunden bzw. Tage anzuzeigen.
-4. Drücke das Refresh-Symbol, um die Wetterdaten zu aktualisieren.
-5. Verwende die Suchfunktion, um nach Wetterinformationen für andere Städte zu suchen.
-
-## Berechtigungen
-Die App erfordert die Berechtigung zum Zugriff auf deinen Standort, um standortbasierte Wetterdaten anzuzeigen. Diese Berechtigung kann in den Einstellungen deines Geräts aktiviert oder deaktiviert werden.
+## 📸 Screenshots
+(Füge hier deine Screenshots ein)
 
 ## Lizenz
-Die Wiindi-App steht unter der [MIT-Lizenz](https://appmaster.io/de/glossary/mit-lizenz), was bedeutet, dass sie frei verwendet, geändert und weitergegeben werden kann, solange die Lizenzbedingungen eingehalten werden.
+MIT License
 
 ## Kontakt
 Wenn du Fragen, Anmerkungen oder Probleme mit der App hast, zögere nicht, mich zu kontaktieren. Du kannst mich unter [alexander_samson@icloud.com] erreichen.
