@@ -1,5 +1,5 @@
 # Wiindi - Eine Wetter-App für Android
-⭐ Featured Project — Demonstrates Android Architecture, API Integration and Production-like App Structure
+Featured Project — Demonstrates Android Architecture, API Integration and Production-like App Structure
 
 Willkommen bei Wiindi, deiner benutzerfreundlichen Wetter-App für Android! Mit Wiindi kannst du das aktuelle Wetter und Vorhersagen für deine Stadt und andere Städte weltweit abrufen.
 
@@ -8,12 +8,12 @@ Willkommen bei Wiindi, deiner benutzerfreundlichen Wetter-App für Android! Mit 
 
 
 
-# 🌦 Wiindi – Weather App (Android)
+# Wiindi – Weather App (Android)
 
 Wiindi ist eine moderne Android-Wetter-App, entwickelt mit Kotlin, die aktuelle Wetterdaten und Vorhersagen für Städte weltweit anzeigt.  
 Das Projekt demonstriert die Integration externer REST-APIs, asynchrone Datenverarbeitung sowie die Darstellung dynamischer Inhalte in einer benutzerfreundlichen mobilen Oberfläche.
 
-## 🧠 Technische Highlights
+## Technische Highlights
 - Integration einer externen Wetter-API
 - Asynchrone Netzwerkkommunikation mit Volley
 - Bildladen und Caching mit Picasso
@@ -21,7 +21,7 @@ Das Projekt demonstriert die Integration externer REST-APIs, asynchrone Datenver
 - Fragment-basierte Navigation
 - Fehlerbehandlung bei Netzwerkanfragen
 
-## 🛠 Tech Stack
+## Tech Stack
 - Kotlin
 - Android SDK
 - AndroidX Fragments
@@ -29,14 +29,14 @@ Das Projekt demonstriert die Integration externer REST-APIs, asynchrone Datenver
 - Picasso (Image Loading)
 - Material Design Components
 
-## 📱 Features
+## Features
 - Anzeige des aktuellen Wetters
 - Stunden- und 14-Tage-Vorhersage
 - Suche nach Städten weltweit
 - Standortbasierte Wetterinformationen
 - Dynamisches Aktualisieren der Wetterdaten
 
-## 🎯 Ziel des Projekts
+## Ziel des Projekts
 Dieses Projekt wurde entwickelt, um praktische Erfahrung mit API-Integration, Netzwerkkommunikation und Datenverarbeitung in Android-Anwendungen zu sammeln.
 
 ## Lizenz
